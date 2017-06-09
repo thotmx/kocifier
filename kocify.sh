@@ -9,14 +9,14 @@ set -o errexit
 #######################
 
 # Update packages
-sudo apt-mark hold grub2-common grub-common grub-pc grub-pc-bin 
-sudo apt-get update 
-sudo apt-get upgrade
+sudo apt-mark hold grub2-common grub-common grub-pc grub-pc-bin
+sudo apt-get -y update
+sudo apt-get -y upgrade
 
 # Add wireless drivers
-sudo apt-get purge bcmwl-kernel-source 
-sudo apt-get install firmware-b43legacy-installer 
-sudo apt-get install firmware-b43-installer 
+sudo apt-get -y purge bcmwl-kernel-source
+sudo apt-get -y install firmware-b43legacy-installer
+sudo apt-get -y install firmware-b43-installer
 
 # Install software
 
