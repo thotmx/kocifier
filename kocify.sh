@@ -134,7 +134,7 @@ ubuntu-keyboard-english
 ubuntu-keyboard-spanish
 )
 
-for package in ${#array[*]} 
+for package in ${array[*]} 
 do
   sudo apt-get -y install $package
 done
