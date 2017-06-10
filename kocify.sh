@@ -20,7 +20,7 @@ sudo apt-get -y install firmware-b43-installer
 
 # Install software
 
-software = `curl -sSL https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/ubermix_packages`
+software=( $(curl -sSL https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/ubermix_packages) )
 
 for package in ${software[*]}
 do
