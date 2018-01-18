@@ -44,25 +44,25 @@ function ubermix_kocify {
 }
 
 function set_regional_formats {
-	# Generate a new locale file for es_MX
-	sudo locale-gen es_MX.UTF-8
-	# Reconfigure locales
-	sudo dpkg-reconfigure locales
-	# Adjusting locales
-	sudo update-locale LANG=es_MX.UTF-8
-	sudo update-locale LC_CTYPE=es_MX.UTF-8
-	sudo update-locale LC_NUMERIC=es_MX.UTF-8
-	sudo update-locale LC_TIME=es_MX.UTF-8
-	sudo update-locale LC_COLLATE=es_MX.UTF-8
-	sudo update-locale LC_MONETARY=es_MX.UTF-8
-	sudo update-locale LC_MESSAGES=es_MX.UTF-8
-	sudo update-locale LC_PAPER=es_MX.UTF-8
-	sudo update-locale LC_NAME=es_MX.UTF-8
-	sudo update-locale LC_ADDRES=es_MX.UTF-8
-	sudo update-locale LC_TELEPHONE=es_MX.UTF-8
-	sudo update-locale LC_MEASUREMENT=es_MX.UTF-8
-	sudo update-locale LC_IDENTIFICATION=es_MX.UTF-8
-	sudo update-locale LC_ALL=es_MX.UTF-8
+  # Generate a new locale file for es_MX
+  sudo locale-gen es_MX.UTF-8
+  # Reconfigure locales
+  sudo dpkg-reconfigure locales
+  # Adjusting locales
+  sudo update-locale LANG=es_MX.UTF-8
+  sudo update-locale LC_CTYPE=es_MX.UTF-8
+  sudo update-locale LC_NUMERIC=es_MX.UTF-8
+  sudo update-locale LC_TIME=es_MX.UTF-8
+  sudo update-locale LC_COLLATE=es_MX.UTF-8
+  sudo update-locale LC_MONETARY=es_MX.UTF-8
+  sudo update-locale LC_MESSAGES=es_MX.UTF-8
+  sudo update-locale LC_PAPER=es_MX.UTF-8
+ 	sudo update-locale LC_NAME=es_MX.UTF-8
+  sudo update-locale LC_ADDRES=es_MX.UTF-8
+  sudo update-locale LC_TELEPHONE=es_MX.UTF-8
+  sudo update-locale LC_MEASUREMENT=es_MX.UTF-8
+  sudo update-locale LC_IDENTIFICATION=es_MX.UTF-8
+  sudo update-locale LC_ALL=es_MX.UTF-8
 }
 
 
