@@ -30,6 +30,11 @@ function remove_keyboard_packages {
   sudo apt-get remove fcitx*
 }
 
+function change_timezone{
+  sudo rm /etc/localtime
+  sudo ln -s /usr/share/zoneinfo/America/Mexico_City /etc/localtime
+}
+
 function ubermix_kocify {
   ubermix_update_packages
   ubermix_install_wireless_drivers
@@ -39,7 +44,7 @@ function ubermix_kocify {
   # Change regional formats
   # Configure input methods
   remove_keyboard_packages
-  # Change the timezone to Mexico City
+  change_timezone
   # Install Language Pack support for Spanish
 }
 
