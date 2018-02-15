@@ -55,7 +55,7 @@ function remove_keyboard_packages {
   sudo apt-get remove fcitx*
 }
 
-function change_timezone{
+function change_timezone {
   sudo rm /etc/localtime
   sudo ln -s /usr/share/zoneinfo/America/Mexico_City /etc/localtime
 }
