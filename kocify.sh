@@ -4,31 +4,6 @@ shopt -s extglob
 set -o errtrace
 set -o errexit
 
-dist='unknown'
-
-function check_distro {
-  distFile=`cat /etc/lsb-release`
-
-  # Testing on my OS
-  if [[ ${distFile} = *'elementary'* ]]; then
-    dist='elementary'
-  fi
-  # Testing on what ubuntu should look
-  if [[ ${distFile} = *'ubuntu'* ]]; then
-    dist='ubuntu'
-  fi
-  # Testing for ubermix, I'm not sure if it starts with capital u,
-  # so bermix should work
-  if [[ ${distFile} = *'bermix'* ]]; then
-    dist='ubermix'
-  fi
-
-  # The same as ubermix, aspbian should work
-  if [[ ${distFile} = *'aspbian'* ]]; then
-    dist='raspbian'
-  fi
-}
-
 function ubermix_update_packages {
   sudo apt-mark hold grub2-common grub-common grub-pc grub-pc-bin
   sudo apt-get -y update
@@ -47,7 +22,7 @@ function ubermix_install_software {
 
   for package in ${software[*]}
   do
-    sudo apt-get -y install ${package}
+    sudo apt-get -y install $package
   done
 }
 
@@ -71,8 +46,6 @@ function ubermix_kocify {
   remove_keyboard_packages
   change_timezone
   # Install Language Pack support for Spanish
-  check_distro
-  echo ${dist}
 }
 
 #######################
@@ -80,3 +53,8 @@ function ubermix_kocify {
 #######################
 
 ubermix_kocify
+
+
+
+
+
