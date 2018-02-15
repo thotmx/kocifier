@@ -61,14 +61,6 @@ function change_timezone{
 }
 
 function ubermix_kocify {
-  check_distro
-
-  if [[ ${dist} = *'raspbian'* ]]; then
-    echo 'Raspbian customization should be here';
-  fi
-  if [[ ${dist} = *'raspbian'* ]]; then
-    echo 'Ubermix customization should be here';
-  fi
   # dist will have the distribution value
   ubermix_update_packages
   ubermix_install_wireless_drivers
@@ -82,13 +74,13 @@ function ubermix_kocify {
   # Install Language Pack support for Spanish
 }
 
-#######################
-# Ubermix customization
-#######################
-
-ubermix_kocify
-
-
-
-
-
+check_distro
+if [[ ${dist} = *'raspbian'* ]]; then
+  echo 'Raspbian customization should be here';
+fi
+if [[ ${dist} = *'ubermix'* ]]; then
+  #######################
+  # Ubermix customization
+  #######################
+  ubermix_kocify
+fi
