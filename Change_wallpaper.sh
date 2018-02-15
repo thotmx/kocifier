@@ -7,12 +7,12 @@ function ubermix_download_background_image {
 	sudo chmod a+rw /usr/share/backgrounds/*
 }
 
-function ubermix_configuration_background_image {	
+function ubermix_configuration_background_image { 	
 	gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/ubermix-2.2L-koc-es-background.jpg
 	gsettings set org.gnome.desktop.background picture-options 'stretched'
 }
 
-function ubermix_bakcground_main {
+function ubermix_background_main {
 	ubermix_download_background_image
 	ubermix_configuration_background_image
 }
