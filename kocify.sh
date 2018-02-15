@@ -61,6 +61,8 @@ function change_timezone{
 }
 
 function ubermix_kocify {
+  check_distro
+  # dist will have the distribution value
   ubermix_update_packages
   ubermix_install_wireless_drivers
   ubermix_install_software
@@ -71,8 +73,6 @@ function ubermix_kocify {
   remove_keyboard_packages
   change_timezone
   # Install Language Pack support for Spanish
-  check_distro
-  echo ${dist}
 }
 
 #######################
