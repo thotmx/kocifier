@@ -22,7 +22,6 @@ function check_distro {
   if [[ ${distFile} = *'bermix'* ]]; then
     dist='ubermix'
   fi
-
   # The same as ubermix, aspbian should work
   if [[ ${distFile} = *'aspbian'* ]]; then
     dist='raspbian'
@@ -61,7 +60,6 @@ function change_timezone {
 }
 
 function ubermix_kocify {
-  # dist will have the distribution value
   ubermix_update_packages
   ubermix_install_wireless_drivers
   ubermix_install_software
@@ -75,6 +73,7 @@ function ubermix_kocify {
 }
 
 check_distro
+# dist will have the distribution value
 if [[ ${dist} = *'raspbian'* ]]; then
   echo 'Raspbian customization should be here';
 fi
