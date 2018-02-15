@@ -8,21 +8,13 @@ dist='unknown'
 
 function check_distro {
   distFile=`cat /etc/lsb-release`
-
-  # Testing on my OS
-  if [[ ${distFile} = *'elementary'* ]]; then
-    dist='elementary'
-  fi
-  # Testing on what ubuntu should look
-  if [[ ${distFile} = *'ubuntu'* ]]; then
-    dist='ubuntu'
-  fi
   # Testing for ubermix, I'm not sure if it starts with capital u,
   # so bermix should work
   if [[ ${distFile} = *'bermix'* ]]; then
     dist='ubermix'
   fi
-  # The same as ubermix, aspbian should work
+  distFile=`cat /etc/os-release`
+  # The same as bermix for ubermix, aspbian should work for raspbian
   if [[ ${distFile} = *'aspbian'* ]]; then
     dist='raspbian'
   fi
