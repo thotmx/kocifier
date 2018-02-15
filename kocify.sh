@@ -30,19 +30,6 @@ function remove_keyboard_packages {
   sudo apt-get remove fcitx*
 }
 
-function ubermix_kocify {
-  ubermix_update_packages
-  ubermix_install_wireless_drivers
-  ubermix_install_software
-  # Change the wallpaper using commands
-  # Install Kids Ruby
-  # Change regional formats
-  # Configure input methods
-  remove_keyboard_packages
-  # Change the timezone to Mexico City
-  # Install Language Pack support for Spanish
-}
-
 function set_regional_formats {
   # Generate a new locale file for es_MX
   sudo locale-gen es_MX.UTF-8
@@ -64,6 +51,21 @@ function set_regional_formats {
   sudo update-locale LC_IDENTIFICATION=es_MX.UTF-8
   sudo update-locale LC_ALL=es_MX.UTF-8
 }
+
+function ubermix_kocify {
+  ubermix_update_packages
+  ubermix_install_wireless_drivers
+  ubermix_install_software
+  # Change the wallpaper using commands
+  # Install Kids Ruby
+  # Change regional formats
+  set_regional_formats
+  # Configure input methods
+  remove_keyboard_packages
+  # Change the timezone to Mexico City
+  # Install Language Pack support for Spanish
+}
+
 
 
 #######################
