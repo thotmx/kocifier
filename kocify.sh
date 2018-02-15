@@ -7,15 +7,19 @@ set -o errexit
 dist='unknown'
 
 function check_distro {
-  distFile=`cat /etc/lsb-release`
+  if [[ -f '/etc/lsb-release' ]]; then
+    distFile=`cat /etc/lsb-release`;
+  elif [[ -f '/etc/os-release' ]]; then
+    distFile=`cat /etc/os-release`;
+  else
+    distFile='No release file found';
+  fi
   # Testing for ubermix, I'm not sure if it starts with capital u,
   # so bermix should work
   if [[ ${distFile} = *'bermix'* ]]; then
     dist='ubermix'
-  fi
-  distFile=`cat /etc/os-release`
   # The same as bermix for ubermix, aspbian should work for raspbian
-  if [[ ${distFile} = *'aspbian'* ]]; then
+  elif [[ ${distFile} = *'aspbian'* ]]; then
     dist='raspbian'
   fi
 }
