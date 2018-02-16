@@ -2,13 +2,13 @@
 
 function ubermix_download_background_image {
 	cd /tmp/
-	wget http://www.kidsoncomputers.org/data/backgrounds/ubermix-2.2L-koc-es-background.jpg
-	sudo cp ubermix-2.2L-koc-es-background.jpg /usr/share/backgrounds
+	wget https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/assets/Wallpaper%204x3.png
+	sudo cp 'Wallpaper 4x3.png' /usr/share/backgrounds
 	sudo chmod a+rw /usr/share/backgrounds/*
 }
 
 function ubermix_configuration_background_image { 	
-	gsettings set org.gnome.desktop.background picture-uri file:///usr/share/backgrounds/ubermix-2.2L-koc-es-background.jpg
+	gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/Wallpaper 4x3.png'
 	gsettings set org.gnome.desktop.background picture-options 'stretched'
 }
 
