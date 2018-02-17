@@ -53,17 +53,26 @@ function set_regional_formats {
 }
 
 function ubermix_kocify {
-  ubermix_update_packages
-  ubermix_install_wireless_drivers
-  ubermix_install_software
+  echo 'Updating packages'
+  tmp = `ubermix_update_packages`
+  echo 'Installing wireless drivers'
+  tmp = `ubermix_install_wireless_drivers`
+  echo 'Installing software'
+  tmp = `ubermix_install_software`
+  # For the rest of the functions, uncomment echo
+  # and add tmp = `name_function`
   # Change the wallpaper using commands
-  # Install Kids Ruby
+  # echo 'Changing wallpaper'
   # Change regional formats
-  set_regional_formats
+  echo 'Changing regional formats'
+  tmp = `set_regional_formats`
   # Configure input methods
+  echo 'Configuring keyboard packages'
   remove_keyboard_packages
   # Change the timezone to Mexico City
+  # echo 'Changing timezone'
   # Install Language Pack support for Spanish
+  # echo 'Installing language support'
 }
 
 
