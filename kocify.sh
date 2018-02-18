@@ -30,13 +30,7 @@ function remove_keyboard_packages {
   sudo apt-get remove fcitx*
 }
 
-function install_language_support {
-    sudo apt-get install language-pack-es
-    sudo apt-get install languaje-pack-es-base
-    sudo apt-get install aspell-es
-    sudo apt-get install myspell-es
-    sudo apt-get install manpages-es
-}
+
 
 function ubermix_kocify {
   ubermix_update_packages
@@ -48,7 +42,6 @@ function ubermix_kocify {
   # Configure input methods
   remove_keyboard_packages
   # Change the timezone to Mexico City
-  install_language_support
 }
 
 #######################
