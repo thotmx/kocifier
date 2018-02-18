@@ -46,7 +46,9 @@ kturtle
 kwordquiz
 laby
 language-pack-en
+language-pack-es
 language-pack-en-base
+language-pack-es-base
 language-pack-gnome-es
 language-pack-gnome-es-base
 language-pack-kde-es
@@ -72,6 +74,8 @@ libreoffice-pdfimport
 libreoffice-templates
 libreoffice-writer
 marble
+manpages-es
+myspell-es
 mysql-common
 mysql-server-core-5.7
 onboard
