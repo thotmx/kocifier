@@ -9,7 +9,8 @@ function ubermix_download_background_image {
 
 function ubermix_configuration_background_image { 	
 	gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/Wallpaper 4x3.png'
-	gsettings set org.gnome.desktop.background picture-options 'stretched'
+	gsettings set org.gnome.desktop.background picture-options 'scaled'
+  gsettings set org.gnome.desktop.background primary-color '#ffffff'
 }
 
 function ubermix_background_main {
