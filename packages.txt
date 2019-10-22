@@ -1,0 +1,196 @@
+# Sound and Video - audio utility
+audacious
+
+# Office - dictionary
+gnome-dictionary
+
+# Accessories - PDF Viewer
+evince
+
+# Programming - text/code editor
+geany
+
+# Education - artificial life evolution simulation
+biogenesis
+
+# Games - memory activities
+childsplay
+pairs
+
+# Office - Docs, spreadsheets, presentations (like MS Office)
+libreoffice
+libreoffice-base
+libreoffice-base-core
+libreoffice-calc
+libreoffice-common
+libreoffice-core
+libreoffice-dmaths
+libreoffice-draw
+libreoffice-gnome
+libreoffice-gtk2
+libreoffice-help-en-us
+libreoffice-help-es
+libreoffice-impress
+libreoffice-l10n-en-us
+libreoffice-l10n-es
+libreoffice-lightproof-en
+libreoffice-math
+libreoffice-mysql-connector
+libreoffice-pdfimport
+libreoffice-writer
+
+# Games - pacman-like game
+hannah
+
+# Games - lemmings clone
+pingus
+
+# Games - lead water to storage tank
+vodovod
+
+# Graphics - Diagrams and charts
+dia
+dia-common
+dia-shapes
+
+# Games
+## ExtremeTuxRacer too slow on Pi; requires OpenGL
+###extremetuxracer
+
+# Games - 36 games
+brainparty
+
+# Accessories - scientific calculator
+galculator
+
+# Games - basic drawing/letters for young children (2yrs +)
+gamine
+gamine-data
+
+# Games - logic puzzles, memory
+gbrainy
+
+# Education - basic computer skills for young kids
+gcompris
+
+# Graphics - advanced graphical editing
+gimp
+gimp-help-en
+gimp-help-es
+
+# Education - math games
+tuxmath
+
+# Education - typing tutor and games
+tuxtype
+tuxtype-data
+
+# Education - Logic board design
+smartsim
+
+# Games
+gnome-chess
+gnome-sudoku
+gnome-system-tools
+
+# Programming - Easy programming for ages 8+
+scratch2
+
+# Education - basic geography and quizzes
+kgeography
+kgeography-data
+
+# Education - geography
+marble
+
+# Programming - learn programming while creating music
+sonic-pi
+
+# Games - learn programming languages with ants and spider webs
+laby
+
+# Games - Educational games, ages 3-10
+pysiogame
+
+# Games - train game
+ri-li
+
+# Games - Minecraft (basic edition, built for pi)
+minecraft-pi
+
+# Games - MineTest is similar to Minecraft, but more advanced than minecraft-pi. Can play networked games on IIAB server.
+### Note: If graphics performance is slow, enable "Open GL Driver" as follows:
+###   - Open Terminal
+###   - Run "sudo raspi-config"
+###     - Advanced Options
+###     - GL Driver
+###     - GL (Full KMS)
+###
+### Note: Enabling Open GL Driver can make VLC video playback choppy
+minetest
+minetest-server
+
+# Education - simple drawing program for young children
+tuxpaint
+tuxpaint-data
+tuxpaint-plugins
+tuxpaint-stamps
+
+# Games - air hockey
+tuxpuck
+
+# Graphics - image editors
+#mypaint
+mirage
+
+# Graphics - screenshot
+gnome-screenshot
+
+# Sound and Video - video player
+vlc
+
+# Sound and Video - audio player
+qmmp
+
+
+# Misc utilities
+git-svn
+subversion
+tcpdump
+nmap
+pydf
+
+ace-of-penguins
+apache2
+aptitude
+aspell
+aspell-en
+aspell-es
+blinken
+build-essential
+cups
+extremetuxracer
+gzip
+hplip
+kalzium
+kalzium-data
+ktouch
+ktouch-data
+kturtle
+kwordquiz
+mysql-common
+mariadb-server-core-10.3
+onboard
+p7zip
+php
+php-mysql
+php-mcrypt
+php-common
+php-cli
+pychess
+scratch
+stellarium
+stellarium-data
+supertux
+wamerican
+wspanish
