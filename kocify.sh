@@ -88,6 +88,11 @@ function raspbian_download_background_image {
 	#sudo mkdir /usr/local/share/backgrounds
 	sudo cp 'Wallpaper 4x3.png' /usr/share/rpd-wallpaper/temple.jpg
 	sudo chmod a+rw /usr/share/rpd-wallpaper/temple.jpg
+  # Change the splash page
+  sudo cp 'Wallpaper 4x3.png' /usr/share/plymouth/themes/pix/splash.png
+  # Add Spanish MagPI
+  wget https://www.raspberrypi.org/magpi-issues/MagPi_Mini_Spanish_01.pdf
+  cp MagPi_Mini_Spanish_01.pdf /home/pi/MagPi/
 }
 
 function ubermix_configuration_background_image {
@@ -133,6 +138,10 @@ if [[ ${dist} = *'raspbian'* ]]; then
   echo "= Raspbian customization"
   echo "================================="
   raspbian_kocify
+  echo "================================="
+  echo "= Raspbian customization completed"
+  echo "================================="
+  sudo shutdown -r now
 fi
 if [[ ${dist} = *'ubermix'* ]]; then
   #######################
