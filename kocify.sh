@@ -30,6 +30,14 @@ function ubermix_update_packages {
   sudo apt-get -y upgrade
 }
 
+function raspbian_update_os {
+  echo "================================="
+  echo "= Updating OS"
+  echo "================================="
+  sudo apt-get -y update
+  sudo apt-get -y upgrade
+}
+
 function ubermix_install_wireless_drivers {
   # Add wireless drivers
   sudo apt-get -y purge bcmwl-kernel-source
@@ -46,6 +54,19 @@ function ubermix_install_software {
   done
 }
 
+#https://raw.githubusercontent.com/kidsoncomputers/documentation/master/uganda/2019/install-packages.sh
+function install_software {
+  echo "================================="
+  echo "= Installing packages"
+  echo "================================="
+  software=( $(curl -sSL https://raw.githubusercontent.com/roninsphere/kocifier/mexico2019/packages.txt | sed '/^ *#/d;s/#.*//' ) )
+  for package in ${software[*]}
+  do
+    sudo apt-get -y install ${package}
+  done
+}
+
+
 function remove_keyboard_packages {
   sudo apt-get remove fcitx*
 }
@@ -56,20 +77,32 @@ function change_timezone {
 }
 
 function ubermix_download_background_image {
-	cd /tmp/
 	wget https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/assets/Wallpaper%204x3.png
 	sudo cp 'Wallpaper 4x3.png' /usr/share/backgrounds
 	sudo chmod a+rw /usr/share/backgrounds/*
 }
 
-function ubermix_configuration_background_image { 	
-	gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/backgrounds/Wallpaper 4x3.png'
+function raspbian_download_background_image {
+	cd /tmp/
+	wget https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/assets/Wallpaper%204x3.png
+	#sudo mkdir /usr/local/share/backgrounds
+	sudo cp 'Wallpaper 4x3.png' /usr/share/rpd-wallpaper/temple.jpg
+	sudo chmod a+rw /usr/share/rpd-wallpaper/temple.jpg
+}
+
+function ubermix_configuration_background_image {
+	gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/rpd-wallpaper/Wallpaper 4x3.png'
 	gsettings set org.gnome.desktop.background picture-options 'scaled'
   gsettings set org.gnome.desktop.background primary-color '#ffffff'
 }
 
 function ubermix_background_main {
 	ubermix_download_background_image
+	ubermix_configuration_background_image
+}
+
+function raspbian_background_main {
+	raspbian_download_background_image
 	ubermix_configuration_background_image
 }
 
@@ -86,10 +119,20 @@ function ubermix_kocify {
   # Install Language Pack support for Spanish
 }
 
+function raspbian_kocify {
+  raspbian_update_os
+  install_software
+  raspbian_background_main
+  change_timezone
+}
+
 check_distro
 # dist will have the distribution value
 if [[ ${dist} = *'raspbian'* ]]; then
-  echo 'Raspbian customization should be here';
+  echo "================================="
+  echo "= Raspbian customization"
+  echo "================================="
+  raspbian_kocify
 fi
 if [[ ${dist} = *'ubermix'* ]]; then
   #######################
