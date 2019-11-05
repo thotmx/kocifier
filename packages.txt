@@ -1,0 +1,203 @@
+##############################################################################
+# ROCK STAR APPS:
+##############################################################################
+# Education - math games
+tuxmath
+# Education - typing tutor and games
+tuxtype
+tuxtype-data
+# Education - simple drawing program for young children
+tuxpaint
+tuxpaint-data
+tuxpaint-plugins
+tuxpaint-stamps
+
+## Minecraft (careful about versions...minecraft-pi basic but adequate?
+# Minetest requires GL driver that messes up VLC etc?),
+# Games - Minecraft (basic edition, built for pi)
+minecraft-pi
+# Games - MineTest is similar to Minecraft, but more advanced than minecraft-pi. Can play networked games on IIAB server.
+### Note: If graphics performance is slow, enable "Open GL Driver" as follows:
+###   - Open Terminal
+###   - Run "sudo raspi-config"
+###     - Advanced Options
+###     - GL Driver
+###     - GL (Full KMS)
+###
+### Note: Enabling Open GL Driver can make VLC video playback choppy
+minetest
+#minetest-server
+
+# Scratch 2 prob better than Raspbian’s built-in basic version,
+# Programming - Easy programming for ages 8+
+scratch2
+
+# Potato Guy
+ktuberling
+
+# Education - basic computer skills for young kids
+gcompris
+# Office - Docs, spreadsheets, presentations (like MS Office)
+libreoffice
+libreoffice-base
+libreoffice-base-core
+libreoffice-calc
+libreoffice-common
+libreoffice-core
+libreoffice-dmaths
+libreoffice-draw
+libreoffice-gnome
+libreoffice-gtk2
+libreoffice-help-en-us
+libreoffice-help-es
+libreoffice-impress
+libreoffice-l10n-en-us
+libreoffice-l10n-es
+libreoffice-lightproof-en
+libreoffice-math
+libreoffice-mysql-connector
+libreoffice-pdfimport
+libreoffice-writer
+
+# Games - logic puzzles, memory
+gbrainy
+
+
+###############################################################################
+# ADDITIONAL APPS:
+###############################################################################
+
+# Accessories - scientific calculator
+galculator
+
+# Sound and Video - audio utility
+audacious
+
+# Office - dictionary
+gnome-dictionary
+
+# Accessories - PDF Viewer
+evince
+
+# Education - artificial life evolution simulation
+biogenesis
+
+# Graphics - Diagrams and charts
+dia
+dia-common
+dia-shapes
+
+# Graphics - advanced graphical editing
+gimp
+gimp-help-en
+gimp-help-es
+
+# Games - memory activities
+childsplay
+pairs
+
+# Games - pacman-like game
+hannah
+
+# Games - lemmings clone
+pingus
+
+# Games - lead water to storage tank
+vodovod
+
+# Games
+# Games - 36 games
+brainparty
+
+# Games - basic drawing/letters for young children (2yrs +)
+gamine
+gamine-data
+
+# Education - Logic board design
+smartsim
+
+# Games
+gnome-chess
+gnome-sudoku
+gnome-system-tools
+
+# Education - basic geography and quizzes
+kgeography
+kgeography-data
+
+# Education - geography
+marble
+
+# Programming - learn programming while creating music
+sonic-pi
+
+# Games - learn programming languages with ants and spider webs
+laby
+
+# Games - Educational games, ages 3-10
+pysiogame
+
+# Games - train game
+ri-li
+
+# Games - air hockey
+tuxpuck
+
+# Games - card games
+ace-of-penguins
+# Game - Simon Says game
+blinken
+# Game - winter sports racing game
+extremetuxracer
+
+# Graphics - image editors
+mirage
+
+# Graphics - screenshot
+gnome-screenshot
+
+# Sound and Video - video player
+vlc
+
+# Sound and Video - audio player
+qmmp
+
+# Misc utilities
+# the Network Mapper - Free Security Scanner
+nmap
+# spell checker
+aspell
+aspell-en
+aspell-es
+
+# Open Source printing system
+cups
+hplip
+# Onscreen Keyboard
+onboard
+
+# Open Source science software
+kalzium
+kalzium-data
+ktouch
+ktouch-data
+kturtle
+kwordquiz
+
+php
+php-mysql
+php-mcrypt
+php-common
+php-cli
+pychess
+
+# Planetarium
+stellarium
+stellarium-data
+
+# Game - Open Source Super Mario Bros
+supertux
+
+# Spell Checker Dictionaries
+wamerican
+wspanish
