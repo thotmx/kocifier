@@ -26,14 +26,14 @@ minecraft-pi
 ###
 ### Note: Enabling Open GL Driver can make VLC video playback choppy
 minetest
-minetest-server
+#minetest-server
 
 # Scratch 2 prob better than Raspbian’s built-in basic version,
 # Programming - Easy programming for ages 8+
 scratch2
 
-# GCompris, LibreOffice, Mr. Potato Head, GBrainy.
-# not finding Mr. Potato Head??
+# Potato Guy
+ktuberling
 
 # Education - basic computer skills for young kids
 gcompris
