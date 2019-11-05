@@ -71,12 +71,25 @@ function remove_keyboard_packages {
   sudo apt-get remove fcitx*
 }
 
+function change_locale {
+  sudo perl -pi -e 's/# es_MX.UTF-8 UTF-8/es_MX.UTF-8 UTF-8/g' /etc/locale.gen
+  sudo perl -pi -e 's/en_GB.UTF-8 UTF-8/# en_GB.UTF-8 UTF-8/g' /etc/locale.gen
+  #sudo rm -rf /etc/default/locale
+  sudo perl -pi -e 's/en_GB.UTF-8/es_MX.UTF-8/g' /etc/default/locale
+  sudo locale-gen
+  # seams to fail
+  sudo update-locale es_MX.UTF-8
+  sudo localedef -v -c -i es_MX -f UTF-8 es_MX.UTF-8
+  sudo locale -a
+}
+
 function change_timezone {
   sudo rm /etc/localtime
   sudo ln -s /usr/share/zoneinfo/America/Mexico_City /etc/localtime
 }
 
 function ubermix_download_background_image {
+  cd /tmp/
 	wget https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/assets/Wallpaper%204x3.png
 	sudo cp 'Wallpaper 4x3.png' /usr/share/backgrounds
 	sudo chmod a+rw /usr/share/backgrounds/*
@@ -129,6 +142,7 @@ function raspbian_kocify {
   install_software
   raspbian_background_main
   change_timezone
+  change_locale
 }
 
 check_distro
