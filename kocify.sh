@@ -59,7 +59,7 @@ function install_software {
   echo "================================="
   echo "= Installing packages"
   echo "================================="
-  software=( $(curl -sSL https://raw.githubusercontent.com/roninsphere/kocifier/mexico2019/packages.txt | sed '/^ *#/d;s/#.*//' ) )
+  software=( $(curl -sSL https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/packages.txt | sed '/^ *#/d;s/#.*//' ) )
   for package in ${software[*]}
   do
     sudo apt-get -y install ${package}
