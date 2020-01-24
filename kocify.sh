@@ -18,7 +18,9 @@ function check_distro {
   # so bermix should work
   if [[ ${distFile} = *'bermix'* ]]; then
     dist='ubermix'
-  # The same as bermix for ubermix, aspbian should work for raspbian
+  elif [[ ${distFile} = *'buntu'* ]]; then
+    dist='ubermix'
+    # The same as bermix for ubermix, aspbian should work for raspbian
   elif [[ ${distFile} = *'aspbian'* ]]; then
     dist='raspbian'
   fi
@@ -46,7 +48,8 @@ function ubermix_install_wireless_drivers {
 }
 
 function ubermix_install_software {
-  software=( $(curl -sSL https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/ubermix_packages) )
+  # TODO: Temporary change to the route
+  software=( $(curl -sSL https://raw.githubusercontent.com/thotmx/kocifier/master/ubermix_packages) )
 
   for package in ${software[*]}
   do
@@ -59,7 +62,8 @@ function install_software {
   echo "================================="
   echo "= Installing packages"
   echo "================================="
-  software=( $(curl -sSL https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/packages.txt | sed '/^ *#/d;s/#.*//' ) )
+  # TODO: Temporary change to the route
+  software=( $(curl -sSL https://raw.githubusercontent.com/thotmx/kocifier/master/packages.txt | sed '/^ *#/d;s/#.*//' ) )
   for package in ${software[*]}
   do
     sudo apt-get -y install ${package}
@@ -90,17 +94,17 @@ function change_timezone {
 
 function ubermix_download_background_image {
   cd /tmp/
-	wget https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/assets/Wallpaper%204x3.png
-	sudo cp 'Wallpaper 4x3.png' /usr/share/backgrounds
-	sudo chmod a+rw /usr/share/backgrounds/*
+  wget https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/assets/Wallpaper%204x3.png
+  sudo cp 'Wallpaper 4x3.png' /usr/share/backgrounds
+  sudo chmod a+rw /usr/share/backgrounds/*
 }
 
 function raspbian_download_background_image {
-	cd /tmp/
-	wget https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/assets/Wallpaper%204x3.png
-	#sudo mkdir /usr/local/share/backgrounds
-	sudo cp 'Wallpaper 4x3.png' /usr/share/rpd-wallpaper/temple.jpg
-	sudo chmod a+rw /usr/share/rpd-wallpaper/temple.jpg
+  cd /tmp/
+  wget https://raw.githubusercontent.com/kidsoncomputers/kocifier/master/assets/Wallpaper%204x3.png
+  #sudo mkdir /usr/local/share/backgrounds
+  sudo cp 'Wallpaper 4x3.png' /usr/share/rpd-wallpaper/temple.jpg
+  sudo chmod a+rw /usr/share/rpd-wallpaper/temple.jpg
   # Change the splash page
   sudo cp 'Wallpaper 4x3.png' /usr/share/plymouth/themes/pix/splash.png
   # Add Spanish MagPI
@@ -109,19 +113,19 @@ function raspbian_download_background_image {
 }
 
 function ubermix_configuration_background_image {
-	gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/rpd-wallpaper/Wallpaper 4x3.png'
-	gsettings set org.gnome.desktop.background picture-options 'scaled'
+  gsettings set org.gnome.desktop.background picture-uri 'file:///usr/share/rpd-wallpaper/Wallpaper 4x3.png'
+  gsettings set org.gnome.desktop.background picture-options 'scaled'
   gsettings set org.gnome.desktop.background primary-color '#ffffff'
 }
 
 function ubermix_background_main {
-	ubermix_download_background_image
-	ubermix_configuration_background_image
+  ubermix_download_background_image
+  ubermix_configuration_background_image
 }
 
 function raspbian_background_main {
-	raspbian_download_background_image
-	ubermix_configuration_background_image
+  raspbian_download_background_image
+  ubermix_configuration_background_image
 }
 
 function ubermix_kocify {
