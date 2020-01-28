@@ -12,6 +12,12 @@ tuxpaint-data
 tuxpaint-plugins
 tuxpaint-stamps
 
+# Turtle Art: LOGO-inspired software but graphical from Sugar project
+sugar-turtleart-activity
+
+# SuperTux cart
+# Not possible to install in a simple way: https://www.raspberrypi.org/forums/viewtopic.php?f=78&t=195612&sid=3c9a4d6de049a614dd88cee94a79d00b&start=25 
+
 ## Minecraft (careful about versions...minecraft-pi basic but adequate?
 # Minetest requires GL driver that messes up VLC etc?),
 # Games - Minecraft (basic edition, built for pi)

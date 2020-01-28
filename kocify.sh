@@ -49,7 +49,7 @@ function ubermix_install_wireless_drivers {
 
 function ubermix_install_software {
   # TODO: Temporary change to the route
-  software=( $(curl -sSL https://raw.githubusercontent.com/thotmx/kocifier/master/ubermix_packages) )
+  software=( $(curl -sSL https://raw.githubusercontent.com/thotmx/kocifier/master/ubermix_packages | sed '/^ *#/d;s/#.*//' ) )
 
   for package in ${software[*]}
   do

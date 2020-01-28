@@ -1,55 +1,52 @@
-ace-of-penguins
-apache2
-aptitude
-aspell
-aspell-en
-aspell-es
-audacious
-biogenesis
-blinken
-build-essential
-childsplay
-childsplay-alphabet-sounds-es
-cups
-dia
-dia-common
-dia-gnome
-dia-shapes
-evince
-extremetuxracer
-firmware-b43legacy-installer
-firmware-b43-installer
-flashplugin-downloader
-flashplugin-installer
-galculator
-gamine
-gamine-data
-gbrainy
+##############################################################################
+# ROCK STAR APPS:
+##############################################################################
+# Education - math games
+tuxmath
+# Education - typing tutor and games
+tuxtype
+tuxtype-data
+tuxtype-data-nonfree
+# Education - simple drawing program for young children
+tuxpaint
+tuxpaint-data
+tuxpaint-plugins
+tuxpaint-stamps
+
+# Turtle Art: LOGO-inspired software but graphical from Sugar project
+sugar-turtleart-activity
+
+# SuperTux cart
+# Not possible to install in a simple way: https://www.raspberrypi.org/forums/viewtopic.php?f=78&t=195612&sid=3c9a4d6de049a614dd88cee94a79d00b&start=25 
+
+## Minecraft (careful about versions...minecraft-pi basic but adequate?
+# Minetest requires GL driver that messes up VLC etc?),
+# Games - Minecraft (basic edition, built for pi)
+minecraft-pi
+# Games - MineTest is similar to Minecraft, but more advanced than minecraft-pi. Can play networked games on IIAB server.
+### Note: If graphics performance is slow, enable "Open GL Driver" as follows:
+###   - Open Terminal
+###   - Run "sudo raspi-config"
+###     - Advanced Options
+###     - GL Driver
+###     - GL (Full KMS)
+###
+### Note: Enabling Open GL Driver can make VLC video playback choppy
+minetest
+#minetest-server
+
+# Scratch 2 prob better than Raspbian’s built-in basic version,
+# Programming - Easy programming for ages 8+
+scratch
+
+# Potato Guy
+ktuberling
+
+# Education - basic computer skills for young kids
 gcompris
-gcompris-data
 gcompris-sound-es
-gimp
-gimp-help-en
-gimp-help-es
-gnome-chess
-gnome-sudoku
-gnome-system-tools
-gzip
-hplip
-kalzium
-kalzium-data
-kgeography
-kgeography-data
-ktouch
-ktouch-data
-kturtle
-kwordquiz
-laby
-language-pack-en
-language-pack-en-base
-language-pack-gnome-es
-language-pack-gnome-es-base
-language-pack-kde-es
+
+# Office - Docs, spreadsheets, presentations (like MS Office)
 libreoffice
 libreoffice-base
 libreoffice-base-core
@@ -59,7 +56,7 @@ libreoffice-core
 libreoffice-dmaths
 libreoffice-draw
 libreoffice-gnome
-libreoffice-gtk
+libreoffice-gtk2
 libreoffice-help-en-us
 libreoffice-help-es
 libreoffice-impress
@@ -69,40 +66,175 @@ libreoffice-lightproof-en
 libreoffice-math
 libreoffice-mysql-connector
 libreoffice-pdfimport
-libreoffice-templates
 libreoffice-writer
+
+# Games - logic puzzles, memory
+gbrainy
+
+
+###############################################################################
+# ADDITIONAL APPS:
+###############################################################################
+
+# Accessories - scientific calculator
+galculator
+
+# Sound and Video - audio utility
+audacious
+
+# Office - dictionary
+gnome-dictionary
+
+# Accessories - PDF Viewer
+evince
+
+# Education - artificial life evolution simulation
+biogenesis
+
+# Graphics - Diagrams and charts
+dia
+dia-gnome
+dia-common
+dia-shapes
+
+# Graphics - advanced graphical editing
+gimp
+gimp-help-en
+gimp-help-es
+
+# Games - memory activities
+childsplay
+childsplay-alphabet-sounds-es
+pairs
+
+# Games - pacman-like game
+hannah
+
+# Games - lemmings clone
+pingus
+
+# Games - lead water to storage tank
+vodovod
+
+# Games
+# Games - 36 games
+brainparty
+
+# Games - basic drawing/letters for young children (2yrs +)
+gamine
+gamine-data
+
+# Education - Logic board design
+smartsim
+
+# Games
+gnome-chess
+gnome-sudoku
+gnome-system-tools
+
+# Education - basic geography and quizzes
+kgeography
+kgeography-data
+
+# Education - geography
 marble
-mysql-common
-mysql-server-core-5.7
-onboard
-p7zip
-php7.0
-php7.0-mysql
-php7.0-mcrypt
-php7.0-common
-php7.0-cli
-pychess
+
+# Programming - learn programming while creating music
+sonic-pi
+
+# Games - learn programming languages with ants and spider webs
+laby
+
+# Games - Educational games, ages 3-10
 pysiogame
+
+# Games - train game
 ri-li
-scratch
+
+# Games - air hockey
+tuxpuck
+
+# Games - card games
+ace-of-penguins
+# Game - Simon Says game
+blinken
+# Game - winter sports racing game
+extremetuxracer
+
+# Graphics - image editors
+mirage
+
+# Graphics - screenshot
+gnome-screenshot
+
+# Sound and Video - video player
+vlc
+
+# Sound and Video - audio player
+qmmp
+
+# Misc utilities
+# the Network Mapper - Free Security Scanner
+nmap
+# spell checker
+aspell
+aspell-en
+aspell-es
+
+# Open Source printing system
+cups
+hplip
+# Onscreen Keyboard
+onboard
+
+# Open Source science software
+kalzium
+kalzium-data
+ktouch
+ktouch-data
+kturtle
+kwordquiz
+
+php
+php-mysql
+php-mcrypt
+php-common
+php-cli
+pychess
+
+# Planetarium
 stellarium
 stellarium-data
+
+# Game - Open Source Super Mario Bros
 supertux
-tuxmath
-tuxpaint
-tuxpaint-data
-tuxpaint-plugins
-tuxpaint-stamps
-tuxpuck
-tuxtype
-tuxtype-data
-tuxtype-data-nonfree
+supertuxkart
+
+# Spell Checker Dictionaries
+wamerican
+wspanish
+
+
+# Extra software for Ubermix
+aptitude
+
+language-pack-en
+language-pack-en-base
+language-pack-gnome-es
+language-pack-gnome-es-base
+language-pack-kde-es
+
+build-essential
+firmware-b43legacy-installer
+firmware-b43-installer
+flashplugin-downloader
+flashplugin-installer
+
+gzip
+p7zip
 ubuntu-edu-preschool
 ubuntu-edu-primary
 ubuntu-edu-secondary
 ubuntu-edu-tertiary
-vlc
-wamerican
-wspanish
 ubuntu-keyboard-english
 ubuntu-keyboard-spanish
